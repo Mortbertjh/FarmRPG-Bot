@@ -1,0 +1,326 @@
+<div id="botsettingscontainer" class="view farmrpgplus-view">
+    <style>
+        #botsettingscontainer {
+            z-index: 9999;
+            display: none;
+            position: absolute;
+            left: 1px;
+            bottom: 1px;
+            width: 450px;
+            height: 650px;
+            background-color: rgb(0, 0, 0);
+            color: rgb(199, 199, 199);
+            border: 1px solid black;
+        }
+
+        #botsettingscontainer button {
+            width: 100%;
+        }
+
+        #botsettingscontainer .page-content {
+            top: 25px;
+        }
+    </style>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="center">FarmRPG+</div>
+        </div>
+    </div>
+    <div class="pages">
+        <div class="page">
+            <div class="page-content">
+                <!-- tabs -->
+                <div class="tabs-animated-wrap">
+                    <div class="tabs">
+                        <!-- AutoFarming Tab -->
+                        <div id="tab1" class="tab tab-active">
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link smart-select">
+                                            <select name="planteverything" id="planteverything">
+                                                <option value="12" selected data-display-as="Pepper Seeds">Pepper Seeds
+                                                </option>
+                                                <option value="20" data-display-as="Carrot Seeds">Carrot Seeds</option>
+                                                <option value="28" data-display-as="Pea Seeds">Pea Seeds</option>
+                                                <option value="30" data-display-as="Cucumber Seeds">Cucumber Seeds
+                                                </option>
+                                                <option value="14" data-display-as="Eggplant Seeds">Eggplant Seeds
+                                                </option>
+                                                <option value="32" data-display-as="Radish Seeds">Radish Seeds</option>
+                                                <option value="34" data-display-as="Onion Seeds">Onion Seeds</option>
+                                                <option value="47" data-display-as="Hops Seeds">Hops Seeds</option>
+                                                <option value="49" data-display-as="Potato Seeds">Potato Seeds</option>
+                                                <option value="16" data-display-as="Tomato Seeds">Tomato Seeds</option>
+                                                <option value="51" data-display-as="Leek Seeds">Leek Seeds</option>
+                                                <option value="60" data-display-as="Watermelon Seeds">Watermelon Seeds
+                                                </option>
+                                                <option value="64" data-display-as="Corn Seeds">Corn Seeds</option>
+                                                <option value="66" data-display-as="Cabbage Seeds">Cabbage Seeds
+                                                </option>
+                                                <option value="68" data-display-as="Pumpkin Seeds">Pumpkin Seeds
+                                                </option>
+                                                <option value="70" data-display-as="Wheat Seeds">Wheat Seeds</option>
+                                                <option value="158" data-display-as="Gold Pepper Seeds">Gold Pepper
+                                                    Seeds
+                                                </option>
+                                                <option value="160" data-display-as="Gold Carrot Seeds">Gold Carrot
+                                                    Seeds
+                                                </option>
+                                                <option value="162" data-display-as="Gold Pea Seeds">Gold Pea Seeds
+                                                </option>
+                                                <option value="190" data-display-as="Gold Cucumber Seeds">Gold Cucumber
+                                                    Seeds</option>
+                                            </select>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Seed</div>
+                                                    <div class="item-after">Pepper Seeds</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="autoharvest" name="autoharvest">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Autoharvest</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="autoplant" name="autoplant">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Autoplant</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="autobuy" name="autobuy">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Autobuy</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="autosell" name="autosell">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Autosell</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="plantallbtn" class="button">Start Autofarming</button>
+                        </div>
+                        <!-- AutoExploration Tab -->
+                        <div id="tab2" class="tab">
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link smart-select">
+                                            <select name="autoexplore" id="autoexplore">
+                                                <option value="1" selected data-display-as="Small Cave">Small Cave
+                                                </option>
+                                                <option value="2" data-display-as="Small Spring">Small Spring
+                                                </option>
+                                                <option value="3" data-display-as="Highland Hills">Highland Hills
+                                                </option>
+                                                <option value="4" data-display-as="Cane Pole Ridge">Cane Pole Ridge
+                                                </option>
+                                                <option value="5" data-display-as="Fifth Place">Fifth Place</option>
+                                                <option value="6" data-display-as="Sixth Place">Sixth Place</option>
+                                                <option value="7" data-display-as="Seventh Place">Seventh Place
+                                                </option>
+                                                <option value="8" data-display-as="Eighth Place">Eighth Place
+                                                </option>
+                                            </select>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Location</div>
+                                                    <div class="item-after">Small Cave</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="waitforstamina" name="waitforstamina">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Wait for Stamina</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="useapple" name="useapple">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Use Apple</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="useorange" name="useorange">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Use Orange Juice</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="autoexplorebtn" class="button">Start Autoexploring</button>
+                        </div>
+                        <!-- AutoFishing Tab -->
+                        <div id="tab3" class="tab">
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="item-link smart-select">
+                                            <select name="autofishing" id="autofishing">
+                                                <option value="1" selected data-display-as="Small Pond">Small Pond
+                                                </option>
+                                                <option value="2" data-display-as="Farm Pond">Farm Pond
+                                                </option>
+                                                <option value="3" data-display-as="Forest Pond">Forest Pond
+                                                </option>
+                                                <option value="4" data-display-as="Lake Tempest">Lake Tempest
+                                                </option>
+                                                <option value="5" data-display-as="Small Island">Small Island</option>
+                                                <option value="6" data-display-as="Crystal River">Crystal River</option>
+                                                <option value="7" data-display-as="Seventh Place">Seventh Place
+                                                </option>
+                                                <option value="8" data-display-as="Eighth Place">Eighth Place
+                                                </option>
+                                            </select>
+                                            <div class="item-content">
+                                                <div class="item-inner">
+                                                    <div class="item-title">Location</div>
+                                                    <div class="item-after">Small Pond</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="list-block">
+                                <ul>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="useworms" name="useworms">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Use Worms</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="usegrubs" name="usegrubs">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Use Grubs</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label class="label-checkbox item-content">
+                                            <input type="checkbox" id="useminnows" name="useminnows">
+                                            <div class="item-media">
+                                                <i class="icon icon-form-checkbox"></i>
+                                            </div>
+                                            <div class="item-inner">
+                                                <div class="item-title">Use Minnows</div>
+                                            </div>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button id="autofishingbtn" class="button">Start Autofishing</button>
+                        </div>
+                        <div id="tab4" class="tab">
+                            <div class="list-block">
+                                <ul>
+                                  <li>
+                                    <div class="item-content">
+                                      <div class="item-inner">
+                                        <div class="item-title label">FarmID</div>
+                                        <div class="item-input">
+                                            <input type="text" id="FarmID" name="FarmID" placeholder="${GM_getValue('farmid')}">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <div class="item-content">
+                                      <div class="item-inner">
+                                        <div class="item-title label">Farm RowCount</div>
+                                        <div class="item-input">
+                                            <input type="number" min="3" max="10" id="farmrowcount" name="farmrowcount" placeholder="${GM_getValue('farmrowcount')}">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </div>  
+                            <button id="savefarmdatabtn" class="button">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- tabbar at bottom -->
+            <div class="toolbar tabbar tabbar-labels">
+                <div class="toolbar-inner">
+                    <a href="#tab1" class="tab-link active">
+                        <span class="tabbar-label">AutoFarm</span>
+                    </a>
+                    <a href="#tab2" class="tab-link">
+                        <span class="tabbar-label">AutoExplore</span>
+                    </a>
+                    <a href="#tab3" class="tab-link">
+                        <span class="tabbar-label">AutoFishing</span>
+                    </a>
+                    <a href="#tab4" class="tab-link">
+                        <span class="tabbar-label">Settings</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
