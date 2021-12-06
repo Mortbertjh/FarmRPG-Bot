@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Adds buttons to do some things automatically
 // @author       aleho8
-// @match        https://farmrpg.com/
+// @match        https://farmrpg.com/*
 // @icon         https://www.google.com/s2/favicons?domain=farmrpg.com
 // @grant        GM_setValue
 // @grant        GM_getValue
@@ -358,7 +358,9 @@ let farmManager;
     injectButton();
 
     window.onload = async () => {
-        farmManager = new Farm(GM_getValue("farmid"), GM_getValue("farmrowcount"));
+        const farmID = GM_getValue("farmid") || 0;
+        const farmRowCount = GM_getValue("farmrowcount") || 0;
+        farmManager = new Farm(farmID, farmRowCount);
 
         setInterval(async () => {
             await farmManager.refreshInventory();
