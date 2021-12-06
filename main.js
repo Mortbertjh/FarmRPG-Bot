@@ -330,7 +330,7 @@ class Farm {
             req.open("GET", `https://farmrpg.com/worker.php?cachebuster=${r}&go=getstats`);
             req.addEventListener("load", () => {
                 if (req.status == 200) {
-                    let regexp = /<strong>([0-9|,]+)<\/strong>/gs;
+                    let regexp = /middle'> ([0-9|,]+) &nbsp;/gs;
                     let resp = req.responseText;
                     let arr = [...resp.matchAll(regexp)];
                     this.coins = arr[0][1].replace(",", "");
